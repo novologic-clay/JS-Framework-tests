@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en" ng-app="catalyst">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>NovoLogic, Inc</title>
+        <style type="text/css">
+            .highcharts-credits {
+                display: none !important;
+            }
+        </style>
+    </head>
+    <body id="catalyst-app">
+
+        <highchart-chart highchart-data="{
+            &quot;chart&quot;:{
+                &quot;type&quot;:&quot;spline&quot;
+            },
+            &quot;title&quot;:{
+                &quot;text&quot;:&quot;Fruit Consumption&quot;
+            },
+            &quot;xAxis&quot;:{
+                &quot;categories&quot;:[
+                    &quot;Apples&quot;,
+                    &quot;Bananas&quot;,
+                    &quot;Oranges&quot;
+                ]
+            },
+            &quot;yAxis&quot;:{
+                &quot;title&quot;:{
+                    &quot;text&quot;:&quot;number eaten&quot;
+                }
+            }
+        }"></highchart-chart>
+
+        <highchart-chart highchart-data="{
+            &quot;chart&quot;:{
+                &quot;type&quot;:&quot;bar&quot;
+            },
+            &quot;title&quot;:{
+                &quot;text&quot;:&quot;Bats Eaten&quot;
+            },
+            &quot;xAxis&quot;:{
+                &quot;categories&quot;:[
+                    &quot;Fruit Bats&quot;,
+                    &quot;Vampire Bats&quot;,
+                    &quot;Other Bats&quot;
+                ]
+            },
+            &quot;yAxis&quot;:{
+                &quot;title&quot;:{
+                    &quot;text&quot;:&quot;number eaten&quot;
+                }
+            }
+        }"></highchart-chart>
+
+        <highchart-chart highchart-data="{
+            &quot;chart&quot;:{
+                &quot;type&quot;:&quot;column&quot;
+            },
+            &quot;title&quot;:{
+                &quot;text&quot;:&quot;Animals Slain&quot;
+            },
+            &quot;xAxis&quot;:{
+                &quot;categories&quot;:[
+                    &quot;Badgers&quot;,
+                    &quot;Vultures&quot;,
+                    &quot;Squirrels&quot;
+                ]
+            },
+            &quot;yAxis&quot;:{
+                &quot;title&quot;:{
+                    &quot;text&quot;:&quot;number killed&quot;
+                }
+            }
+        }"></highchart-chart>
+
+        <highchart-chart highchart-data="{
+            &quot;chart&quot;:{
+                &quot;type&quot;:&quot;line&quot;
+            },
+            &quot;title&quot;:{
+                &quot;text&quot;:&quot;Cars Parked&quot;
+            },
+            &quot;xAxis&quot;:{
+                &quot;categories&quot;:[
+                    &quot;BMW&quot;,
+                    &quot;Alfa Romeo&quot;,
+                    &quot;Mercedes-Benz&quot;
+                ]
+            },
+            &quot;yAxis&quot;:{
+                &quot;title&quot;:{
+                    &quot;text&quot;:&quot;number parked&quot;
+                }
+            }
+        }"></highchart-chart>
+
+        <hr/>
+
+        <event-bus-button event-name="chart-refresh">Refresh</event-bus-button>
+
+        <hr/>
+
+        <button root-emit="chart-init">Initialize</button>
+        <!-- Javascript below the fold for quick page load -->
+
+        <!-- CDN Libraries -->
+        <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
+        <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/2.3.1/vuex.min.js"></script>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+
+
+        <!-- Local Scripts (use relative paths as all functionality is relative to index.html) -->
+        <script src="js/app/vue-app.js"></script>
+    </body>
+</html>
